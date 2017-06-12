@@ -1,0 +1,120 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
+        "course": {
+          "type":"object"
+        },
+        "contentobject": {
+          "type":"object",
+          "properties":{
+            "_articleBackground": {
+              "type":"object",
+              "required":true,
+              "legend": "Article Background",
+              "properties":{
+                "_isActive": {
+                  "type":"boolean",
+                  "required":true,
+                  "title": "Enabled",
+                  "inputType": { "type": "Boolean", "options": [false, true]},
+                  "validators": [],
+                  "help": "Set to true to enable the article background, false to disable it."
+                }
+              }
+            }
+          }
+        },
+        "article": {
+          "type":"object",
+          "properties":{
+            "_articleBackground": {
+              "type":"object",
+              "required":false,
+              "legend": "Article Background",
+              "properties":{
+                "mobileSrc": {
+                  "type":"string",
+                  "required":false,
+                  "title": "Background image (Mobile)",
+                  "default": "",
+                  "inputType": "Asset:image",
+                  "help": "The background image you want shown for this article when the course is viewed at mobile resolution"
+                },
+                "src": {
+                  "type":"string",
+                  "required":false,
+                  "title": "Background image (Desktop)",
+                  "default": "",
+                  "inputType": "Asset:image",
+                  "help": "The background image you want shown for this article when the course is viewed at desktop resolution"
+                },
+                "mobileBannerHeight": {
+                    "type":"number",
+                    "required":true,
+                    "default": 150,
+                    "title": "Min Article Height on mobile in pixels",
+                    "inputType": "Number",
+                    "validators": ["number"],
+                    "help": "Minimum height of the article on a mobile in pixels"
+                },
+                "bannerHeight": {
+                    "type":"number",
+                    "required":true,
+                    "default": 300,
+                    "title": "Banner Height in pixels",
+                    "inputType": "Number",
+                    "validators": ["number"],
+                    "help": "Minimum height of the article on a desktop in pixels"
+                },
+                "backgroundSize": {
+                    "type": "string",
+                    "required": true,
+                    "title": "The size can be set to cover, auto or contain",
+                    "inputType": {"type":"Select", "options":["cover","auto","contain"]},
+                    "default": "cover"
+
+                },
+                "backgroundPosition": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Where to position the background",
+                    "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                    "default": "center center"
+
+                },
+                "backgroundRepeat": {
+                    "type": "string",
+                    "required": true,
+                    "title": "How should the background repeat?",
+                    "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                    "default": "repeat"
+                },
+                "backgroundColor": {
+                    "type": "string",
+                    "required": true,
+                    "title": "The hex color of the background eg: #FFFFFF",
+                    "inputType": "Text",
+                    "default": "transparent"
+
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type":"object"
+        }
+      }
+    }
+  }
+}
