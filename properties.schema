@@ -27,7 +27,7 @@
               "type": "object",
               "legend": "Component icon",
               "properties": {
-                "_src": {
+                "src": {
                   "type": "string",
                   "default": "",
                   "title": "Image",
