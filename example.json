@@ -1,4 +1,6 @@
 //components.json
 "_componentIcon": {
-  "src": "course/en/images/icon.png"
+  "src": "",
+  "_iconName": "star",
+  "_position": "left"
 }

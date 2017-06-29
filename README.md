@@ -1,68 +1,19 @@
-adapt-article-background
-===============
+# adapt-component-icon
 
-Adds the option to implement a background graphic or colour to a article element.
+Adds an text or html icon next to a component.
 
-The graphic defaults to a fullscreen 'cover' to act as a banner (if you implement a 'blank' component within the article).
+<img src='https://github.com/KingsOnline/repo-files/blob/master/component-icon-example.png?raw=true' />
 
-You can set the min-height of this article to achieve the banner height you require. 
+## Usage
 
-You can also set the 'background-size' and 'background-position' to allow different effects.  
+### src
 
-NB: the background height will grow with the height of the components added to the article element.
+(String) A link to an image. **Note** This will be overiden by the `_iconName`
 
-Full credit for original code goes to Dave Gosling (https://github.com/davegosling/adapt-block-background).
+### _iconName
 
-Usage
-------
+(String) The name of the HTML icon you wish to use. The full list is available [here](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/src/icons.less#L36-L362). The `.icon-` prefix is included.
 
+### position
 
-##Settings overview
-
-Extends article data/model
-
-####_articleBackground
-
-Article background options object
-
-
-####_articleBackground.src
-
-This is the background image source used when page is viewed at desktop resolution
-
-####_articleBackground.mobileSrc
-
-This is the background image source used when page is viewed at mobile resolution
-
-####_articleBackground.bannerHeight
-
-This is the min-height of the article element when the page is viewed at desktop resolution
-
-####_articleBackground.mobileBannerHeight
-This is the min-height of the article element when the page is viewed at mobile resolution
-
-####_articleBackground.backgroundSize
-
-This is mapped to the background-size css attribute. Options are "cover", "auto" or "contain"
-
-####_articleBackground.backgroundPosition
-
-This is mapped to the background-position css attribute.  Options are "left","right","center","top","bottom".
-
-####_articleBackground.backgroundRepeat
-
-This is mapped to the background-repeat css attribute.  Options are "repeat","repeat-x","repeat-y","no-repeat".
-
-####_articleBackground.backgroundColor
-
-This is mapped to the background-color css attribute.
-
-##Limitations
-
-Background-position is limited to preset pairs of "left", "center", "right", "top", "bottom"
-
-Background-size is limied to "cover","auto","contain".
-
-##Browser spec
-
-To Be Completed
+(String) The position to display the icon. Only supports `left` or `right`.
