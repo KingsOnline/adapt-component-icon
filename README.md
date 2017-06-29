@@ -14,7 +14,7 @@ The `_iconName` attribute (html icon) will override `src` (image icon). If both 
 
 ### _iconName
 
-(String) The name of the HTML icon you wish to use. The full list is available [here](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/src/icons.less#L36-L362). The `.icon-` prefix is included.
+(String) The name of the HTML icon you wish to use. The full list is available [here](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/src/icons.less#L36-L362). The `.icon-` prefix and `:before` suffix are not required.
 
 ### position
 
