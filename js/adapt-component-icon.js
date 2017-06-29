@@ -23,14 +23,15 @@ define([
         var componentModel = this._componentIcons[i];
         if (componentModel.get('_componentIcon').src !== "") {
           var id = componentModel.get("_id");
-          var $componentElement = this.$el.find("." + id);
-          this.applyImage($componentElement, componentModel.get('_componentIcon').src);
+          var $el = this.$el.find("." + id);
+          this.applyImage($el, componentModel.get('_componentIcon'));
         }
       }
     },
 
-    applyImage: function($el, src) {
-      $($el).find('.component-header').prepend("<div class='component-icon-holder'><img class='component-icon' src='"+ src + "'/></div>");
+    applyImage: function($el, componentIcon) {
+      var template = Handlebars.templates.componentIcon;
+      $($el).find('.component-header').prepend(template(componentIcon));
     }
   });
 
