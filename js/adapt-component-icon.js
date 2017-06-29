@@ -17,7 +17,7 @@ define([
 
     onPageReady: function() {
       _.each(this._componentIcons, function(componentModel) {
-        if (componentModel.get('_componentIcon').src !== "") {
+        if (componentModel.get('_componentIcon').src !== "" || componentModel.get('_componentIcon')._iconName !== "") {
           var id = componentModel.get("_id");
           var $el = this.$el.find("." + id);
           this.applyImage($el, componentModel.get('_componentIcon'));

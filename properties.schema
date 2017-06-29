@@ -30,9 +30,29 @@
                 "src": {
                   "type": "string",
                   "default": "",
-                  "title": "Image",
+                  "title": "Image icon",
+                  "help": "This attribute will be overwritten by Html icon",
                   "required": false,
                   "inputType": "Asset:image"
+                },
+                "_iconName": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Html icon",
+                  "help": "Icon names are avilable <a href='https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/src/icons.less#L36-L362'>here</a>. <strong>.icon-</strong> prefix is added.",
+                  "required": false,
+                  "inputType": "Text"
+                },
+                "_position": {
+                  "type": "string",
+                  "required": false,
+                  "default": "left",
+                  "title": "Icon position",
+                  "enum": ["left", "right"],
+                  "inputType": {
+                    "type": "Select",
+                    "options": ["left", "right"]
+                  }
                 }
               }
             }

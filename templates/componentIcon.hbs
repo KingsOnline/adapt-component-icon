@@ -1,3 +1,7 @@
 <div class='component-icon-holder {{#equals _position 'right'}}right{{/equals}}'>
-<img class="component-icon" src='{{src}}'/>
+  {{#if _iconName}}
+    <div class='component-icon icon icon-{{_iconName}}' />
+  {{else}}
+    <img class="component-icon" src='{{src}}'/>
+  {{/if}}
 </div>
