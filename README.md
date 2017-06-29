@@ -6,9 +6,11 @@ Adds an text or html icon next to a component.
 
 ## Usage
 
+The `_iconName` attribute (html icon) will override `src` (image icon). If both attributes are blank the extension will not be applied.
+
 ### src
 
-(String) A link to an image. **Note** This will be overiden by the `_iconName`
+(String) A link to a image file.
 
 ### _iconName
 
@@ -17,3 +19,13 @@ Adds an text or html icon next to a component.
 ### position
 
 (String) The position to display the icon. Only supports `left` or `right`.
+
+## Limitations
+
+Framework version 2.0.10 + required for Handlebars support.
+
+---
+
+Version number: 0.1.2
+Framework versions: ^2.0.10
+Maintainer: <a href='mailto:simon.date@kcl.ac.uk'>Simon Date</a>
