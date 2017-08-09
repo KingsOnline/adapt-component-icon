@@ -3,7 +3,7 @@
     "repository": "git://github.com/kingsonline/adapt-component-icon",
     "homepage": "https://github.com/kingsonline/adapt-component-icon",
     "framework": "^2.0.10",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "issues": "https://github.com/kingsonline/adapt-component-icon/issues",
     "displayName": "Component icon",
     "extension" : "componentIcon",

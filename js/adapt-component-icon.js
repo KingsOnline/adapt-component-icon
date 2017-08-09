@@ -17,16 +17,18 @@ define([
 
     onPageReady: function() {
       _.each(this._componentIcons, function(componentModel) {
-        if (componentModel.get('_componentIcon').src !== "" || componentModel.get('_componentIcon')._iconName !== "") {
-          var id = componentModel.get("_id");
-          var $el = this.$el.find("." + id);
-          this.applyImage($el, componentModel.get('_componentIcon'));
+        var $el = this.$el.find("." + componentModel.get("_id"));
+        console.log(componentModel.get('_componentIcon'));
+        if (componentModel.get('_componentIcon')._iconName) {
+          this.applyImage($el, componentModel.get('_componentIcon'), "componentIcon-image");
+        } else if (componentModel.get('_componentIcon').src) {
+          this.applyImage($el, componentModel.get('_componentIcon'), "componentIcon-image");
         }
       }, this);
     },
 
-    applyImage: function($el, componentIcon) {
-      var template = Handlebars.templates.componentIcon;
+    applyImage: function($el, componentIcon, type) {
+      var template = Handlebars.templates[type];
       $($el).find('.component-header').prepend(template(componentIcon));
     }
   });
