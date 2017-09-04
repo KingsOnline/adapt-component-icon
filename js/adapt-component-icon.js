@@ -18,7 +18,6 @@ define([
     onPageReady: function() {
       _.each(this._componentIcons, function(componentModel) {
         var $el = this.$el.find("." + componentModel.get("_id"));
-        console.log(componentModel.get('_componentIcon'));
         if (componentModel.get('_componentIcon')._iconName) {
           this.applyImage($el, componentModel.get('_componentIcon'), "componentIcon-image");
         } else if (componentModel.get('_componentIcon').src) {

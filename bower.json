@@ -1,12 +1,12 @@
 {
     "name": "adapt-component-icon",
     "repository": "git://github.com/kingsonline/adapt-component-icon",
-    "homepage": "https://github.com/kingsonline/adapt-component-icon",
     "framework": "^2.0.10",
+    "homepage": "https://github.com/kingsonline/adapt-component-icon",
     "version": "0.1.4",
     "issues": "https://github.com/kingsonline/adapt-component-icon/issues",
     "displayName": "Component icon",
-    "extension" : "componentIcon",
+    "extension": "componentIcon",
     "description": "Adds an text or html icon next to a component.",
     "main": "/js/adapt-component-icon.js",
     "keywords": [
