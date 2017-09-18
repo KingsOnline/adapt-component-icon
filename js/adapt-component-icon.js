@@ -19,7 +19,7 @@ define([
       _.each(this._componentIcons, function(componentModel) {
         var $el = this.$el.find("." + componentModel.get("_id"));
         if (componentModel.get('_componentIcon')._iconName) {
-          this.applyImage($el, componentModel.get('_componentIcon'), "componentIcon-image");
+          this.applyImage($el, componentModel.get('_componentIcon'), "componentIcon-html");
         } else if (componentModel.get('_componentIcon').src) {
           this.applyImage($el, componentModel.get('_componentIcon'), "componentIcon-image");
         }
